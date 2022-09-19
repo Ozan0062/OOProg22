@@ -3,25 +3,25 @@ double netPriceBook = 30;
 double netPriceDVD = 50;
 double netPriceGame = 100;
 
-int noOfBooksInOrder = 0;
-int noOfDVDsInOrder = 0;
-int noOfGamesInOrder = 0;
+int noOfBooksInOrder = 8;
+int noOfDVDsInOrder = 3;
+int noOfGamesInOrder = 2;
 
 double totalNetPrice = netPriceBook * noOfBooksInOrder + 
                        netPriceDVD * noOfDVDsInOrder + 
                        netPriceGame * noOfGamesInOrder;
 
 // SO#1
-bool receiveSpecialOffer1 = false;
+bool receiveSpecialOffer1 = totalNetPrice > 1000;
 
 // SO#2
-bool receiveSpecialOffer2 = false;
+bool receiveSpecialOffer2 = noOfBooksInOrder > noOfGamesInOrder;
 
 // SO#3
-bool receiveSpecialOffer3 = false;
+bool receiveSpecialOffer3 = (noOfBooksInOrder >= 10) || (noOfDVDsInOrder >= 10) || (noOfGamesInOrder >= 10); ;
 
 // SO#4
-bool receiveSpecialOffer4 = false;
+bool receiveSpecialOffer4 = (noOfDVDsInOrder >= 10) && (noOfDVDsInOrder <= 20) || noOfGamesInOrder >= 5;
 
 
 Console.WriteLine($"You ordered {noOfBooksInOrder} books, " +
