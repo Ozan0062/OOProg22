@@ -1,5 +1,7 @@
 ﻿
-BankAccount myAccount = new BankAccount();
+BankAccount myAccount = new BankAccount("Per");
+
+Console.WriteLine($"Account owner is : {myAccount.name}");
 
 myAccount.Deposit(2000);
 Console.WriteLine($"Account balance is : {myAccount.Balance}");

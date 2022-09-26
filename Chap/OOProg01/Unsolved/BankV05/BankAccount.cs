@@ -6,15 +6,26 @@
 public class BankAccount
 {
     private double _balance;
+    private string _name;
 
-    public BankAccount()
+    public BankAccount(string name)
     {
         _balance = 0.0;
+        _name = name;
     }
+
+    
+
+
 
     public double Balance
     {
         get { return _balance; }
+    }
+
+    public string name
+    {
+        get { return _name; }
     }
 
     public void Deposit(double amount)
