@@ -5,6 +5,7 @@
 /// </summary>
 public class BankAccount
 {
+    // Instance Fields
     private double _balance;
     private string _name;
 
