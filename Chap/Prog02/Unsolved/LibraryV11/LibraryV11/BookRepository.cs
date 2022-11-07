@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Generic;
 /// <summary>
 /// This class represents a collection of Book objects,
 /// for instance the books in a library
@@ -30,7 +31,7 @@ public class BookRepository
     /// </summary>
     public void AddBook(Book aBook)
     {
-        // TODO
+        _books.Add(aBook.ISBN, aBook);
     }
 
     /// <summary>
@@ -40,8 +41,7 @@ public class BookRepository
     /// </summary>
     public Book LookupBook(string isbn)
     {
-        // TODO
-        return null;
+        return _books.ContainsKey(isbn) ? _books[isbn] : null;
     }
 
     /// <summary>
@@ -52,7 +52,12 @@ public class BookRepository
     /// </summary>
     public void DeleteBook(string isbn)
     {
-        // TODO
+        _books.Remove(isbn);
+
+    }   
+        #endregion
     }
-    #endregion
-}
+
+
+   
+

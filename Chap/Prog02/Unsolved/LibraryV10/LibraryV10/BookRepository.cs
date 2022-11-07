@@ -30,7 +30,7 @@ public class BookRepository
     /// </summary>
     public void AddBook(Book aBook)
     {
-        // TODO
+       _books.Add(aBook);
     }
 
     /// <summary>
@@ -40,10 +40,14 @@ public class BookRepository
     /// </summary>
     public Book LookupBook(string isbn)
     {
-        // TODO
+        
+            foreach (Book s in _books)
+            {
+                if (s.ISBN == isbn) return s;
+            }
 
-        return null;
-    }
+            return null;
+        }
 
     /// <summary>
     /// This method deletes a Book object from the List
@@ -53,7 +57,17 @@ public class BookRepository
     /// </summary>
     public void DeleteBook(string isbn)
     {
-        // TODO
+
+        for (int i = 0; i < _books.Count; i++)
+        {
+            if (_books[i].ISBN == isbn)
+            { 
+                _books.RemoveAt(i);
+                return;
+            }
+        }
     }
-    #endregion
+
 }
+    #endregion
+

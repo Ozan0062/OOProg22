@@ -7,6 +7,7 @@ public class Warrior
     private int _hitPoint;
     private int _dealdamage;
 
+   
     #endregion
 
     #region Constructor
@@ -17,6 +18,8 @@ public class Warrior
         _hitPoint = hitPoint;
         _dealdamage = dealdamage;
     }
+
+  
     #endregion
 
     #region Properties
@@ -55,9 +58,9 @@ public class Warrior
         _hitPoint -= point;
     }
 
-    public void DealDamage(int point)
+    public void Dealdamage()
     {
-        _dealdamage = 10 && 30;
+        _dealdamage = RandomNumberGenerator.Generate(10, 30);
     }
 
     #endregion

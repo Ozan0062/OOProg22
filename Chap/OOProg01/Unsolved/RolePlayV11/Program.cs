@@ -1,5 +1,5 @@
 ﻿
-Warrior warriorA = new Warrior("Ragnar" , 150);
+Warrior warriorA = new Warrior("Ragnar" , 150,);
 Warrior warriorB = new Warrior("Lagertha" , 140);
 
 Console.WriteLine($"In beggining");
@@ -52,4 +52,12 @@ Console.WriteLine($"{warriorB.Name}, " +
                   $"has {warriorB.HitPoint} hitpoints, " +
                   $"(is dead= {warriorB.Dead})");
 
+warriorA.Dealdamage();
+warriorB.Dealdamage();
+Console.WriteLine($"{warriorA.Name}, " +
+                  $"has {warriorA.HitPoint} hitpoints, " +
+                  $"(is dead= {warriorA.Dead})");
+Console.WriteLine($"{warriorB.Name}, " +
+                  $"has {warriorB.HitPoint} hitpoints, " +
+                  $"(is dead= {warriorB.Dead})");
 

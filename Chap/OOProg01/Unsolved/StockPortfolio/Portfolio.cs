@@ -45,7 +45,7 @@ public class Portfolio
         get
         {
             // Implement the property as described above...
-            return 0.0;
+            return initialPrice 
         }
     }
     #endregion

@@ -1,2 +1,4 @@
 ﻿
-Console.WriteLine("Delete this line when you have written your code");
+Console.WriteLine(MysticNumbers.ThreeNumbers(1, 2, 3));
+Console.WriteLine(MysticNumbers.TwoNumbers(1, 2));
+Console.WriteLine(MysticNumbers.FourNumbers(1, 2, 3, 4));

@@ -6,17 +6,17 @@ public class Warrior
     private int _hitPoints;
     private int _maxDamage;
     private int _minDamage;
-    private Random _generator;
+    private Sword _sword;
     #endregion
 
     #region Constructor
-    public Warrior(string name, int hitPoints, int maxDamage)
+    public Warrior(string name, int hitPoints, int maxDamage, Sword sword)
     {
         _name = name;
         _hitPoints = hitPoints;
         _maxDamage = maxDamage;
         _minDamage = _maxDamage / 4;
-        _generator = new Random(Guid.NewGuid().GetHashCode());
+        _sword = sword;
     }
     #endregion
 
@@ -35,6 +35,8 @@ public class Warrior
     {
         get { return _hitPoints <= 0; }
     }
+
+
     #endregion
 
     #region Methods
@@ -45,7 +47,7 @@ public class Warrior
 
     public int DealDamage()
     {
-        return _generator.Next(_minDamage, _maxDamage);
+        return _sword.DealDamage();
     }
 
     public string GetInfo()

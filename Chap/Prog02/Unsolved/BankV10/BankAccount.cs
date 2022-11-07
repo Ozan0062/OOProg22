@@ -21,12 +21,20 @@
     #region Methods
     public void Deposit(double amount)
     {
-        _balance = _balance + amount;
+        if
+        ((amount > 0) && (amount <= 1000))
+        {
+            _balance = _balance + amount;
+        }
     }
 
     public void Withdraw(double amount)
     {
-        _balance = _balance - amount;
+        if
+             ((amount > 0) && (amount <= 1000 ))
+        { 
+            _balance = _balance - amount;
+     }   
     }
     #endregion
 }
